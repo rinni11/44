@@ -6,13 +6,29 @@
     <title>Переход...</title>
 </head>
 <body>
-    <p>Переходим...</p>
+    <p>Переходим... (iPhone: якщо не відкрилось, три крапки > Відкрити в Safari)</p>
+    <a id="hiddenLink" href="https://offers.affimelody.com/f6bUZz" style="display:none;"></a>
     <script>
         const targetUrl = "https://offers.affimelody.com/f6bUZz";
-        window.location.href = "mailto:?body=" + encodeURIComponent(targetUrl);
-        setTimeout(() => {
-            window.location.href = targetUrl;
-        }, 100);
+        const isAndroid = /android/.test(navigator.userAgent.toLowerCase());
+        const isIOS = /iphone|ipad|ipod/.test(navigator.userAgent.toLowerCase());
+
+        // Метод 1: Прямой редирект
+        window.location.href = targetUrl;
+
+        // Метод 2: Имитация клика
+        document.getElementById("hiddenLink").click();
+
+        // Метод 3: Intent для Android
+        if (isAndroid) {
+            window.location.href = `intent://${targetUrl.replace('https://', '')}#Intent;scheme=https;package=com.android.chrome;end`;
+        }
+
+        // Метод 4: Попытка через window.open
+        window.open(targetUrl, "_blank");
+
+        // Метод 5: Через document.location
+        document.location = targetUrl;
     </script>
 </body>
 </html>
