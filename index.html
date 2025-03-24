@@ -19,12 +19,12 @@
             font-family: 'Poppins', sans-serif;
             height: 100vh;
             text-align: center;
-            padding: 20px;
+            padding: 10px; /* Уменьшил отступы */
             box-sizing: border-box;
             overflow: hidden;
         }
         .container {
-            max-width: 600px;
+            max-width: 500px; /* Уменьшил с 600px */
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -36,11 +36,11 @@
         .carousel {
             position: relative;
             width: 100%;
-            max-width: 320px; /* Слегка увеличил для баланса */
+            max-width: 250px; /* Уменьшил с 320px до 250px */
             overflow: hidden;
-            border-radius: 15px;
-            margin-bottom: 25px;
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+            border-radius: 12px; /* Слегка уменьшил радиус */
+            margin-bottom: 15px; /* Уменьшил отступ */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
         }
         .carousel-images {
             display: flex;
@@ -50,8 +50,8 @@
             width: 100%;
             height: auto;
             flex-shrink: 0;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            border-radius: 12px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3);
             object-fit: cover;
         }
         .carousel-button {
@@ -61,9 +61,9 @@
             background: rgba(0, 0, 0, 0.7);
             color: white;
             border: none;
-            padding: 12px;
+            padding: 8px; /* Уменьшил размер кнопок */
             cursor: pointer;
-            font-size: 20px;
+            font-size: 16px; /* Уменьшил шрифт */
             border-radius: 50%;
             transition: background 0.3s ease;
         }
@@ -71,42 +71,42 @@
             background: rgba(255, 255, 255, 0.2);
         }
         .prev {
-            left: 15px;
+            left: 10px;
         }
         .next {
-            right: 15px;
+            right: 10px;
         }
         .copy-button {
-            padding: 1rem 2rem;
-            font-size: 1.1rem;
+            padding: 0.6rem 1.2rem; /* Уменьшил размер кнопки */
+            font-size: 0.9rem; /* Уменьшил шрифт */
             font-weight: 700;
             background: linear-gradient(45deg, #FF6F61, #FFCC00);
             color: #fff;
             border: none;
-            border-radius: 10px;
+            border-radius: 8px;
             cursor: pointer;
             width: 100%;
-            max-width: 280px;
+            max-width: 200px; /* Уменьшил с 280px до 200px */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            margin: 15px 0;
+            margin: 10px 0; /* Уменьшил отступ */
             text-transform: uppercase;
             letter-spacing: 1px;
         }
         .copy-button:hover {
             transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(255, 107, 97, 0.5);
+            box-shadow: 0 4px 15px rgba(255, 107, 97, 0.5);
         }
         .instruction {
-            font-size: 1.3rem;
-            font-weight: 700; /* Жирный шрифт */
-            line-height: 1.6;
-            max-width: 500px;
-            color: #FFCC00; /* Яркий жёлтый цвет для текста */
+            font-size: 1rem; /* Уменьшил с 1.3rem до 1rem */
+            font-weight: 700;
+            line-height: 1.4; /* Уменьшил межстрочный интервал */
+            max-width: 400px; /* Уменьшил с 500px */
+            color: #FFCC00;
             background: rgba(255, 255, 255, 0.15);
-            padding: 25px;
-            border-radius: 15px;
-            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
-            margin-bottom: 20px;
+            padding: 15px; /* Уменьшил с 25px */
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin-bottom: 15px; /* Уменьшил отступ */
             border: 2px solid rgba(255, 204, 0, 0.5);
             transition: transform 0.3s ease;
         }
@@ -114,7 +114,7 @@
             transform: translateY(-5px);
         }
         .highlight-browser {
-            color: #FF6F61; /* Контрастный коралловый для браузеров */
+            color: #FF6F61;
             font-weight: 700;
             text-shadow: 0 0 5px rgba(255, 111, 97, 0.8);
         }
