@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Copy Link</title>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
 
         body {
             margin: 0;
@@ -21,6 +21,7 @@
             text-align: center;
             padding: 20px;
             box-sizing: border-box;
+            overflow: hidden;
         }
         .container {
             max-width: 600px;
@@ -29,15 +30,17 @@
             flex-direction: column;
             align-items: center;
             position: relative;
-            top: -10%;
+            top: -5%;
+            animation: fadeIn 1s ease-in-out;
         }
         .carousel {
             position: relative;
             width: 100%;
-            max-width: 400px;
+            max-width: 320px; /* Слегка увеличил для баланса */
             overflow: hidden;
-            border-radius: 10px;
-            margin-bottom: 20px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
         }
         .carousel-images {
             display: flex;
@@ -47,60 +50,77 @@
             width: 100%;
             height: auto;
             flex-shrink: 0;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
         }
         .carousel-button {
             position: absolute;
             top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
+            background: rgba(0, 0, 0, 0.7);
             color: white;
             border: none;
-            padding: 10px;
+            padding: 12px;
             cursor: pointer;
-            font-size: 18px;
+            font-size: 20px;
             border-radius: 50%;
+            transition: background 0.3s ease;
+        }
+        .carousel-button:hover {
+            background: rgba(255, 255, 255, 0.2);
         }
         .prev {
-            left: 10px;
+            left: 15px;
         }
         .next {
-            right: 10px;
+            right: 15px;
         }
         .copy-button {
-            padding: 0.8rem 1.5rem;
-            font-size: 1rem;
-            font-weight: 600;
-            background-color: #ffffff;
-            color: #4A1D96;
+            padding: 1rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(45deg, #FF6F61, #FFCC00);
+            color: #fff;
             border: none;
-            border-radius: 8px;
+            border-radius: 10px;
             cursor: pointer;
             width: 100%;
-            max-width: 250px;
-            transition: all 0.3s ease;
-            margin: 10px 0;
+            max-width: 280px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin: 15px 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
         .copy-button:hover {
-            background-color: #EDE7F6;
-            color: #321E75;
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(255, 107, 97, 0.5);
         }
         .instruction {
-            font-size: 1.2rem;
-            font-weight: 400;
+            font-size: 1.3rem;
+            font-weight: 700; /* Жирный шрифт */
             line-height: 1.6;
-            max-width: 450px;
-            opacity: 0.9;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-bottom: 10px;
+            max-width: 500px;
+            color: #FFCC00; /* Яркий жёлтый цвет для текста */
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+            margin-bottom: 20px;
+            border: 2px solid rgba(255, 204, 0, 0.5);
+            transition: transform 0.3s ease;
+        }
+        .instruction:hover {
+            transform: translateY(-5px);
         }
         .highlight-browser {
-            color: #FFCC00;
-            font-weight: 600;
+            color: #FF6F61; /* Контрастный коралловый для браузеров */
+            font-weight: 700;
+            text-shadow: 0 0 5px rgba(255, 111, 97, 0.8);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
         }
     </style>
 </head>
@@ -144,7 +164,7 @@
         // Автоматическая смена слайдов каждые 3 секунды
         setInterval(() => {
             moveSlide(1);
-        }, 2000);
+        }, 3000);
 
         // Функция копирования ссылки
         function copyLink() {
