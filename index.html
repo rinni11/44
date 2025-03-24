@@ -69,8 +69,8 @@
             right: 10px;
         }
         .copy-button {
-            padding: 1rem 2rem;
-            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+            font-size: 1rem;
             font-weight: 600;
             background-color: #ffffff;
             color: #4A1D96;
@@ -78,7 +78,7 @@
             border-radius: 8px;
             cursor: pointer;
             width: 100%;
-            max-width: 300px;
+            max-width: 250px;
             transition: all 0.3s ease;
             margin: 10px 0;
         }
@@ -87,16 +87,16 @@
             color: #321E75;
         }
         .instruction {
-            font-size: 1rem;
+            font-size: 1.2rem;
             font-weight: 400;
             line-height: 1.6;
-            max-width: 400px;
+            max-width: 450px;
             opacity: 0.9;
             background: rgba(255, 255, 255, 0.1);
-            padding: 15px;
+            padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            margin-top: 10px;
+            margin-bottom: 10px;
         }
         .highlight-browser {
             color: #FFCC00;
@@ -108,20 +108,20 @@
     <div class="container">
         <div class="carousel">
             <div class="carousel-images">
-                <img src="path/to/images/SaveClip.App_404904825_393575212995053_1429895271409864039_n.jpg" alt="Image 1">
-                <img src="path/to/images/SaveClip.App_368630921_1015321719788818_1077505966350957411_n.jpg" alt="Image 2">
-                <img src="path/to/images/SaveClip.App_364079226_190107717391952_1281355137343883601_n.jpg" alt="Image 3">
-                <img src="path/to/images/SaveClip.App_383809385_291833407039625_1262081018770295389_n.jpg" alt="Image 4">
-                <img src="path/to/images/SaveClip.App_186522503_320005819643814_409426074746870459_n.jpg" alt="Image 5">
-                <img src="path/to/images/SaveClip.App_238506168_2943492535866153_8737597758978336222_n.jpg" alt="Image 6">
+                <img src="https://rinni11.github.io/44/SaveClip.App_404904825_393575212995053_1429895271409864039_n.jpg" alt="Image 1">
+                <img src="https://rinni11.github.io/44/SaveClip.App_368630921_1015321719788818_1077505966350957411_n.jpg" alt="Image 2">
+                <img src="https://rinni11.github.io/44/SaveClip.App_364079226_190107717391952_1281355137343883601_n.jpg" alt="Image 3">
+                <img src="https://rinni11.github.io/44/SaveClip.App_383809385_291833407039625_1262081018770295389_n.jpg" alt="Image 4">
+                <img src="https://rinni11.github.io/44/SaveClip.App_186522503_320005819643814_409426074746870459_n.jpg" alt="Image 5">
+                <img src="https://rinni11.github.io/44/SaveClip.App_238506168_2943492535866153_8737597758978336222_n.jpg" alt="Image 6">
             </div>
             <button class="carousel-button prev" onclick="moveSlide(-1)">❮</button>
             <button class="carousel-button next" onclick="moveSlide(1)">❯</button>
         </div>
-        <button class="copy-button" onclick="copyLink()">СКОПІЮВАТИ ПОСИЛАННЯ</button>
         <p class="instruction">
             Для коректної роботи сайту скопіюйте посилання та вставте в свій браузер за замовчуванням (<span class="highlight-browser">Safari/Chrome/Opera</span>).
         </p>
+        <button class="copy-button" onclick="copyLink()">СКОПІЮВАТИ ПОСИЛАННЯ</button>
     </div>
 
     <script>
@@ -144,7 +144,7 @@
         // Автоматическая смена слайдов каждые 3 секунды
         setInterval(() => {
             moveSlide(1);
-        }, 3000);
+        }, 2000);
 
         // Функция копирования ссылки
         function copyLink() {
