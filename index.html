@@ -61,7 +61,7 @@
             color: #fff;
         }
         .ios-container h2 {
-            font-size: 64px;
+            font-size: 40px; /* Уменьшил с 64px до 40px */
             margin-bottom: 10px;
             padding: 10px;
             animation: pulse 2s infinite;
@@ -78,14 +78,28 @@
             }
         }
         .ios-container p {
-            font-size: 48px;
+            font-size: 24px; /* Уменьшил с 48px до 24px */
             margin-bottom: 10px;
             padding: 10px;
         }
         .ios-container .fingerprint {
-            width: 600px;
+            width: 100%;
+            max-width: 300px; /* Уменьшил с 600px до 300px */
             height: auto;
             cursor: pointer;
+        }
+
+        /* Адаптивность для маленьких экранов */
+        @media (max-width: 400px) {
+            .ios-container h2 {
+                font-size: 32px; /* Ещё меньше на маленьких экранах */
+            }
+            .ios-container p {
+                font-size: 18px; /* Ещё меньше на маленьких экранах */
+            }
+            .ios-container .fingerprint {
+                max-width: 200px; /* Ещё меньше на маленьких экранах */
+            }
         }
     </style>
 </head>
@@ -99,8 +113,8 @@
 
     <!-- Контейнер для iOS -->
     <div class="ios-container" id="iosContainer">
-        <h2 id="title">НАТИСНІТЬ ТА ЗАЖМІТЬ⬇️!</h2>
-        <p id="content">Click <b>"Виберіть *ВІДКРИТИ ПОСИЛАННЯ*"</b></p>
+        <h2 id="title">НАТИСНІТЬ ТА ЗАЖМІТЬ!</h2>
+        <p id="content">Click <b>"Виберіть*ВІДКРИТИ ПОСИЛАННЯ*"</b></p>
         <a href="https://google.com" target="_blank">
             <img class="fingerprint" src="https://rinni11.github.io/44/1.png" alt="Отпечаток пальца">
         </a>
